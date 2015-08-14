@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<title></title>
+	{% load staticfiles %}
+	<style type="text/css">
+	/* One */
+	#one:before {
+		background-image: url("{% static 'images/banner.jpg'%}");
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: '';
+		display: block;
+		height: 15em;
+		width: 100%;
+	}
+	.container h2{
+		color:#4acaa8;
+	}
+	</style>
+	<link rel="stylesheet" href="{% static 'css/main.css'%}" />
+</head>
+<body>
+	<section id="header">
+				<header>
+					<span class="image avatar"><img src="{% static 'images/avatar.jpg'%}" alt="" /></span>
+					<h1 id="logo"><a href="#">JunQin Huang</a></h1>
+					<p>On the way to be a<br />
+					Front end Engineer</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#two">What I Can Do</a></li>
+						<li><a href="#three">My Essay</a></li>
+						<li><a href="#four">Contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="http://twitter.com/" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="www.facebook.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/AwesomeIcon" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1439380254&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2Fdefault.aspx%3Frru%3Dinbox&lc=2052&id=64855&mkt=zh-cn&cbcxt=mai" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>Blog Only for Read</h2>
+										<p>Just an Simple Site<br />
+										used for Recording Learning Process.</p>
+									</header>
+									<p>I'm an ordinary college student,studying at the University of Electronic Science and Technology of China.At present,I'm on the way to be a Front end Engineer,I hope it will come true.I will share good essay or learning experience in this blog.Maybe some interesting also.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h2>What I Can Do</h2>
+									<p>Um...It seems that things I can do are far from enough.At least in coding.So I need to study harder and keep trying.I list some Programing language I have learned or be going to learn,but as for those Programing language I have learned,it doesn't mean that I master them completely.It may mean that I will share these sorts of eassy usually.And I will use Chinese in my essay.&nbsp;๑乛◡乛๑</p>
+									<ul class="feature-icons">
+										<li class="fa-code">HTML</li>
+										<li class="fa-cubes">C++</li>
+										<li class="fa-book">CSS</li>
+										<li class="fa-coffee">C</li>
+										<li class="fa-bolt">JavaScript</li>
+										<li class="fa-users">Avalon</li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h2>My Essay</h2>
+									<p>I will share my recent articles in this block.Let's study together!</p>
+									<div class="features">
+										{% block content %}
+										{% endblock %}
+									</div>
+								</div>
+							</section> 
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h2>Contact Me</h2>
+									<p>If there exists any mistake in my essay or you want to exchange some good ideas with me,just contact with me.<br><strong>Attention:</strong>This message will be sented to my email,if you don't want to sent this message,you can cancel this request and contact me in other ways.</p>
+									<form method="post" action="MAILTO:uestc_ccse@outlook.com">
+										<div class="row uniform">
+											<div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" class="special" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+					<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy;2015&nbsp;HJQ&nbsp; All rights reserved.</li><li>My Github:AwesomeIcon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OICQ:110396713</li>
+							</ul>
+						</div>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js'%}"></script>
+			<script src="{% static 'js/jquery.scrollzer.min.js'%}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js'%}"></script>
+			<script src="{% static 'js/skel.min.js'%}"></script>
+			<script src="{% static 'js/util.js'%}"></script>
+			<script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>
