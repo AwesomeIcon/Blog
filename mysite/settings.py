@@ -61,7 +61,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
+STATIC_ROOT = os.path.join(SITE_ROOT, 'static').replace('\\','/')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -69,9 +69,10 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    ("css", os.path.join(STATIC_ROOT, 'css')),
-    ("js", os.path.join(STATIC_ROOT, 'js')),
-    ("images", os.path.join(STATIC_ROOT, 'images')),
+    ("css", os.path.join(STATIC_ROOT, 'css').replace('\\','/')),
+    ("js", os.path.join(STATIC_ROOT, 'js').replace('\\','/')),
+    ("images", os.path.join(STATIC_ROOT, 'images').replace('\\','/')),
+    ("html", os.path.join(STATIC_ROOT, 'html').replace('\\','/')),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -122,6 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_markdown',
+    'south',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
