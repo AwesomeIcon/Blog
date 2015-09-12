@@ -1,3 +1,3 @@
-# my_blog Django
+# Blog Django
 
 基于python version 1.4.21搭建
