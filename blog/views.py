@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -12,4 +12,3 @@ def index(request, page_num = 1):
 	t = loader.get_template("index.html")
 	c = Context({'posts':paginator.page(int(page_num))})
 	return HttpResponse(t.render(c))
-

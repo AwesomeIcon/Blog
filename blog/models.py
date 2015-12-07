@@ -2,7 +2,7 @@ from django.db import models
 from django_markdown.models import MarkdownField
 
 
-class Tag(models.Model):#biaoqian
+class Tag(models.Model):
     tag_name = models.CharField(max_length=20)
     create_time = models.DateTimeField(auto_now_add=True)
 
@@ -10,7 +10,7 @@ class Tag(models.Model):#biaoqian
         return unicode(self.tag_name)
 
 
-class Author(models.Model):#zuozhe
+class Author(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField(blank=True)
     website = models.URLField(blank=True)
@@ -19,15 +19,13 @@ class Author(models.Model):#zuozhe
         return u'%s' % (self.name)
 
 
-class Article(models.Model):#wenzhang
-    caption = models.CharField(max_length=30)#biaoti
-
-    publish_time = models.DateTimeField(auto_now_add=True)#fabushijian
-    update_time = models.DateTimeField(auto_now=True)#gengxinriqi
-    author = models.ForeignKey(Author)#zuozhe
-
-    tags = models.ManyToManyField(Tag, blank=True)#biaoqian
-    content = MarkdownField()#neirong
+class Article(models.Model):
+    caption = models.CharField(max_length=30)
+    publish_time = models.DateTimeField(auto_now_add=True)
+    update_time = models.DateTimeField(auto_now=True)
+    author = models.ForeignKey(Author)
+    tags = models.ManyToManyField(Tag, blank=True)
+    content = MarkdownField()
 
 
 
