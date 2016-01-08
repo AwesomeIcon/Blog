@@ -163,7 +163,7 @@ LOGGING = {
 EMAIL_HOST = 'smtp.163.com'                   #SMTP addr
 EMAIL_PORT = 25                                 #SMTP port
 EMAIL_HOST_USER = 'uestc_ccse@fuestck.ml'       #myselfemail
-EMAIL_HOST_PASSWORD = 'HJQ950825'                  #emailpassword
+EMAIL_HOST_PASSWORD = '******'                  #emailpassword
 EMAIL_SUBJECT_PREFIX = 'huangjunqin.com'            #Subject-line pre ,default:'[django]'
 EMAIL_USE_TLS = True                             #when SMTP server connect，if start TLS connection(save connection) default:false
 #adminemail
