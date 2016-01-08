@@ -1,5 +1,5 @@
 # Django settings for mysite project.
-
+#coding:utf-8
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 import os
@@ -99,7 +99,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
@@ -159,3 +159,12 @@ LOGGING = {
         },
     }
 }
+#emailsetting
+EMAIL_HOST = 'smtp.163.com'                   #SMTP addr
+EMAIL_PORT = 25                                 #SMTP port
+EMAIL_HOST_USER = 'uestc_ccse@fuestck.ml'       #myselfemail
+EMAIL_HOST_PASSWORD = 'HJQ950825'                  #emailpassword
+EMAIL_SUBJECT_PREFIX = 'huangjunqin.com'            #Subject-line pre ,default:'[django]'
+EMAIL_USE_TLS = True                             #when SMTP server connect，if start TLS connection(save connection) default:false
+#adminemail
+SERVER_EMAIL = 'uestc_ccse@qq.com'            #The email address that error messages come from, such as those sent to ADMINS and MANAGERS.
