@@ -1,9 +1,5 @@
 # Blog 
 
-## Live Demo
-
-[黄俊钦的博客](http://www.huangjunqin.com/)
-
 ## 准备工作
 
 * Sublime text
